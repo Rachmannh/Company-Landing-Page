@@ -49,8 +49,7 @@ img {
 
 .navbar-expand-lg,
 .nav-link {
-	background-color: #2b2c34;
-	color: #fffffe;
+	color: var(--heading-color);
 	font-weight: var(--fw-2);
 	letter-spacing: 1px;
 	font-size: 24px;
@@ -230,6 +229,7 @@ button:active:focus {
 }
 
 #services .box:hover {
+  background-color: var(--button-background);
 	transition: 0.4s ease-in-out;
 	color: var(--bg-color);
 }
