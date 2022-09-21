@@ -41,6 +41,19 @@ img {
 
 /* Navbar */
 
+.alert {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  margin: -2px 0 -2px 0;
+}
+
+.alert-warning {
+  background-color: var(--tertiary-color);
+  color: var(--bg-color);
+  text-align: center;
+}
+
 .navbar {
 	position: relative;
 	width: 100%;
@@ -339,6 +352,7 @@ button:active:focus {
 
 .feedback-cards {
 	border: none;
+  margin-bottom: 30px !important;
 	background-color: var(--button-background);
 }
 
@@ -397,6 +411,29 @@ button:active:focus {
 	color: var(--button-background);
 }
 
+@media only screen and (max-width: 600px) {
+	.get-in-touch-content {
+    padding: 20px;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+  }
+  .get-in-touch-content h1 {
+    font-size: 34px !important;
+    font-weight: var(--fw-2);
+    text-transform: capitalize;
+    color: var(--heading-color);
+    text-align: center;
+    margin: 10px 0 40px 0;
+  }
+  .social-media-icon {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 34px;
+  }
+}
+
 /* Get in Touch End */
 
 /* Footer */
@@ -418,4 +455,23 @@ footer ul li a {
 footer ul li a:hover {
 	color: var(--button-background);
 	transition: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+	#footer {
+    margin: 100px 0 -20px 0;
+    background-color: var(--heading-color);
+  }
+  footer p {
+    font-size: 14px;
+    color: var(--bg-color);
+  }
+  footer img {
+    width: 34px;
+  }
+  footer ul li a {
+    color: var(--bg-color);
+    text-decoration: none;
+    text-align: center;
+  }
 }
