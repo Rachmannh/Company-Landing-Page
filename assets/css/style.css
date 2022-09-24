@@ -27,6 +27,26 @@ body {
   height: auto;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #6146eaeb;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6246ea;
+}
+
 /* Alt Text */
 
 img {
@@ -376,8 +396,13 @@ button:active:focus {
 }
 
 .get-in-touch-content {
-  padding: 30px;
-  margin: 0 60px 0 60px;
+  background-image: linear-gradient(to right, #2b2c34c9, #2b2c34c9),
+    url(/assets/img/get-in-touch.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 80px;
+  margin: 0 20px 0 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 20px;
 }
@@ -386,7 +411,7 @@ button:active:focus {
   font-size: 50px !important;
   font-weight: var(--fw-2);
   text-transform: capitalize;
-  color: var(--heading-color);
+  color: var(--bg-color);
   text-align: center;
   margin: 0 0 40px 0;
 }
@@ -400,12 +425,13 @@ button:active:focus {
 
 .social-media-icon .sm-icons {
   margin: 0 10px 0 10px;
-  color: var(--heading-color);
+  color: var(--bg-color);
   transition: all 0.1s ease-in-out;
 }
 
 .social-media-icon .sm-icons:hover {
   transform: translateY(-5px);
+  transition: all 0.1s !important;
   color: var(--button-background);
 }
 
