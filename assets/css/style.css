@@ -27,26 +27,6 @@ body {
   height: auto;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #6146eaeb;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #6246ea;
-}
-
 /* Alt Text */
 
 img {
@@ -93,6 +73,47 @@ img {
 .active {
   font-weight: 700;
   color: var(--button-background) !important;
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 3;
+  transition: stroke-dasharray 800ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 300;
+  stroke-width: 3;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 3;
+}
+.line3 {
+  stroke-dasharray: 60 300;
+  stroke-width: 3;
+}
+.opened .line1 {
+  stroke-dasharray: 90 300;
+  stroke-dashoffset: -135;
+  stroke-width: 3;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 3;
+}
+.opened .line3 {
+  stroke-dasharray: 90 300;
+  stroke-dashoffset: -135;
+  stroke-width: 3;
 }
 
 button:active,
@@ -217,6 +238,20 @@ button:active:focus {
   font-size: 22px;
   font-weight: var(--fw-1);
   color: var(--heading-color);
+}
+
+.btn-secondary {
+  background-color: var(--button-background);
+  color: var(--bg-color);
+  border: 2px solid var(--button-background) !important;
+  padding: 8px 20px 8px 20px !important;
+}
+
+.btn-secondary:hover {
+  background-color: transparent !important;
+  border: 2px solid var(--button-background) !important;
+  color: var(--heading-color) !important;
+  transition: 0.6s;
 }
 
 /* About Us End */

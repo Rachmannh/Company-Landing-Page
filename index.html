@@ -48,22 +48,33 @@
             height="34" />
         </a>
         <button
-          class="navbar-toggler"
+          class="navbar-toggler menu"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+          aria-label="Toggle navigation Main Menu">
+          <svg width="40" height="40" viewBox="0 0 100 100">
+            <path
+              class="line line1"
+              d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path
+              class="line line3"
+              d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+          </svg>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="">Home</a>
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="">About</a>
+              <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="">Products</a>
@@ -110,7 +121,7 @@
             <img
               src="./assets/img/about-us.jpg"
               data-aos="fade-left"
-              class="d-block mx-lg-auto img-fluid"
+              class="d-block mx-auto img-fluid"
               alt="About Us Image" />
           </div>
           <div class="col-lg-6">
@@ -120,6 +131,11 @@
               years of experience working with a wide range of technologies in
               order to create unique and high-quality custom solutions.
             </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-start mt-3">
+              <a href="about.html" class="btn btn-secondary btn-md"
+                >Read More <i class="ai-arrow-up-right"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -376,7 +392,6 @@
     <!-- Footer End -->
 
     <!-- My JS -->
-    <script src="./assets/js/myAlert.js"></script>
 
     <!-- Ionicons -->
     <script
@@ -427,6 +442,9 @@
     <!-- AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!-- Akaricons -->
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
+
     <!-- Initialize AOS -->
     <script>
       AOS.init({
@@ -434,13 +452,6 @@
         duration: 1000,
       });
     </script>
-
-    <!-- Masonry -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
-      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
-      crossorigin="anonymous"
-      async></script>
 
     <!-- Bootstrap 5 JS -->
     <script
